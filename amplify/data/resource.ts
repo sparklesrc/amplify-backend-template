@@ -11,6 +11,10 @@ const schema = a.schema({
     .model({
       pet_name: a.string(),
       pet_type: a.string(),
+      pet_age: a.integer(),
+      pet_birth_date: a.string(),
+      pet_sex: a.string(),
+      pet_weight: a.float(),
       pet_photo: a.string(),
       user_name: a.string(),
       annual_vaccine_date: a.string(),
