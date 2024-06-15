@@ -5,7 +5,7 @@ export const storage = defineStorage({
   access: (allow) => ({
     'owners/{entity_id}/*': [
       //allow.guest.to(['read']),
-      allow.authenticated.to(['write', 'delete'])
+      allow.authenticated.to(['read', 'write', 'delete'])
     ],
   })
 });
