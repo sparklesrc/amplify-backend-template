@@ -17,18 +17,27 @@ const schema = a.schema({
       pet_weight: a.float(),
       pet_photo: a.string(),
       user_name: a.string(),
-      annual_vaccine_date: a.string(),
-      next_annual_vaccine_date: a.string(),
-      booster_vaccine_date: a.string(),
-      next_booster_vaccine_date: a.string(),
-      deworming_date: a.string(),
-      next_deworming_date: a.string(),
-      fleas_date: a.string(),
-      next_fleas_date: a.string(),
+      //annual_vaccine_date: a.string(),
+      //next_annual_vaccine_date: a.string(),
+      //booster_vaccine_date: a.string(),
+      //next_booster_vaccine_date: a.string(),
+      //deworming_date: a.string(),
+      //next_deworming_date: a.string(),
+      //fleas_date: a.string(),
+      //next_fleas_date: a.string(),
     })
     //.authorization((allow) => [allow.publicApiKey()]),
     .authorization((allow) => [allow.owner()]),
-});
+  PetCareControlTb: a
+    .model({
+      pet_id: a.string(),
+      control_name: a.string(),
+      control_date: a.string(),
+      control_next_date: a.string(),
+    })
+    .authorization((allow) => [allow.owner()]),
+},
+);
 
 export type Schema = ClientSchema<typeof schema>;
 
