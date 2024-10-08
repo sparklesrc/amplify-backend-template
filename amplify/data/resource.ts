@@ -25,6 +25,8 @@ const schema = a.schema({
       control_name: a.string(),
       control_date: a.string(),
       control_next_date: a.string(),
+      reminder_period: a.string(),
+      notify: a.boolean(),
     })
     .authorization((allow) => [allow.owner()]),
   UserTb: a
