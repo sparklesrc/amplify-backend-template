@@ -11,7 +11,6 @@ const schema = a.schema({
     .model({
       pet_name: a.string(),
       pet_type: a.string(),
-      pet_age: a.integer(),
       pet_birth_date: a.string(),
       pet_sex: a.string(),
       pet_weight: a.float(),
@@ -27,6 +26,13 @@ const schema = a.schema({
       control_next_date: a.string(),
       reminder_period: a.string(),
       notify: a.boolean(),
+    })
+    .authorization((allow) => [allow.owner()]),
+  PetCareWeight: a
+    .model({
+      pet_id: a.string(),
+      weight_value: a.float(),
+      weight_date: a.string(),
     })
     .authorization((allow) => [allow.owner()]),
   UserTb: a
