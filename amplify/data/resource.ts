@@ -28,7 +28,7 @@ const schema = a.schema({
       notify: a.boolean(),
     })
     .authorization((allow) => [allow.owner()]),
-  PetCareWeight: a
+  PetCareWeightTb: a
     .model({
       pet_id: a.string(),
       weight_value: a.float(),
