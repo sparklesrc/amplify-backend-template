@@ -7,13 +7,13 @@ export const override = (stack: any) => {
         name: 'custom:first_name',
         attributeDataType: 'String',
         mutable: true,
-        required: false,
+        required: true,
       },
       {
         name: 'custom:last_name',
         attributeDataType: 'String',
         mutable: true,
-        required: false,
+        required: true,
       },
       {
         name: 'custom:birth_date',
