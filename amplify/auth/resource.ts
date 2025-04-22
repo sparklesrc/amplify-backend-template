@@ -5,4 +5,7 @@ export const auth = defineAuth({
   loginWith: {
     email: true,
   },
+  signUpAttributes: {
+    required: ['firstName', 'lastName', 'phone', 'birthDate', 'address'],
+  }
 });
