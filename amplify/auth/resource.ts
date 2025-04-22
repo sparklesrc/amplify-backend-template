@@ -6,6 +6,6 @@ export const auth = defineAuth({
     email: true,
   },
   signUpAttributes: {
-    required: ['firstName', 'lastName', 'phone', 'birthDate', 'address'],
+    required: ['name', 'family_name', 'phone_number', 'birthdate', 'address'],
   }
 });
