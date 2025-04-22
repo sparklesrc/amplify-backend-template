@@ -6,10 +6,10 @@ export const auth = defineAuth({
     email: true,
   },
   userAttributes: {
-    givenName: { required: true, mutable: true },
-    familyName: { required: true, mutable: true },
-    birthdate: { required: true, mutable: true },
-    address: { required: true, mutable: true },
-    phoneNumber: { required: true, mutable: true },
+    givenName: { required: false, mutable: true },
+    familyName: { required: false, mutable: true },
+    birthdate: { required: false, mutable: true },
+    address: { required: false, mutable: true },
+    phoneNumber: { required: false, mutable: true },
   }
 });
